@@ -38,7 +38,7 @@ The big O-notation runtime is still O(n!) ~ 17! ~ 355 trillion because the upper
 
 Here is an algorithm that enumerates all the sane permutations of "O, DRACONIAN DEVIL!".
 
-{% highlight python %}	
+```python
 import string
 import time
 
@@ -174,7 +174,7 @@ print('After permuting the anagram %s has %s combinations' %
 end = time.time()
 print('Time elapsed is %s' % (end - start))
 print('We skipped recursive calls %s times' % skipped_recursion)
-{% endhighlight %}
+```
 
 Running the code returns 1,458 unique candidates for the decoded anagram of "O, DRACONIAN DEVIL!".
 
@@ -195,7 +195,7 @@ Use [IDF](https://nlp.stanford.edu/IR-book/html/htmledition/inverse-document-fre
 
 There are likely other strategies but I ended up implementing #2. It worked amazingly. Here is the code (I loaded into a hashtable the 1 million most common trigrams found in the [Corpus of Contemporary American English](http://corpus.byu.edu/coca/) found on this [website](http://www.ngrams.info/download_coca.asp)). The trigram solution lends itself very well to this problem since our original anagram "O, DRACONIAN DEVIL!" has two spaces and three words - which makes it a trigram. We also don't necessarily need to use trigrams to solve this, bigrams also works.
 
-{% highlight python %}	
+```python
 # orig_string = 'OH, LAME SAINT'
 orig_string = 'O, DRACONIAN DEVIL'
 transformed_string = transform(orig_string)
@@ -236,7 +236,7 @@ print('After filtering anagrams without common trigrams, the anagram %s has %s c
 
 for anagram in filtered_solution:
     print(anagram.upper())
-{% endhighlight %}
+```
 
 Iterating all 1,458 anagram candidates and merely checking if they existed in the most frequent trigrams hashmap yielded exactly one result!!!
 
