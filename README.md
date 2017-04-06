@@ -26,6 +26,7 @@ Disclaimer: For the following algorithm we are assuming that:
 - The empty spaces count uniquely as characters in an anagram
 - Punctuation marks don't count
 - The anagrams are all in English
+
 *It wouldn't be hard to build an algorithm that doesn't need the above assumptions but I omitted that to simplify this post*
 
 A brute-force strategy would be to compute all of the possible permutations of "O DRACONIAN DEVIL" first, and then to examine each one. Because of this text's length of 17 characters, the number of permutations is 17! ~ seventeen factorial equals to about 355 trillion combinations! There is no way a human or small group of computers could even compute the possibilities -- nevertheless find out the correct one. We need something smarter.
